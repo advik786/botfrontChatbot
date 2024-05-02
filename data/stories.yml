@@ -1,11 +1,23 @@
-stories:
-  - story: KFC (1)
+stories: []
+rules:
+  - rule: Farewells
+    condition: []
+    steps:
+      - intent: chitchat.bye
+      - action: utter_bye
+    metadata:
+      group: Example group
+  - rule: Get started
+    condition: []
+    steps:
+      - intent: get_started
+      - action: utter_get_started
+    metadata:
+      group: Example group
+  - rule: Greetings
+    condition: []
     steps:
       - intent: chitchat.greet
-        user: hi
-        entities: []
-      - action: utter_welcome
-      - action: utter_MavNNLk0m
+      - action: utter_hi
     metadata:
-      group: KFC
-rules: []
+      group: Example group

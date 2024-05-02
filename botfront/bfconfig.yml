@@ -1,5 +1,5 @@
-name: Chitchat
-namespace: bf-chitchat
+name: kfcChat
+namespace: bf-kfc
 defaultLanguage: en
 nluThreshold: 0.75
 timezoneOffset: 0
@@ -7,4 +7,4 @@ allowContextualQuestions: false
 instance:
   name: Default Instance
   host: 'http://localhost:5005'
-  projectId: chitchat-NEpeWWGYt
+  projectId: hxiuJthS2tWvfdjFW
