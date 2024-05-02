@@ -3,19 +3,16 @@ actions:
   - action_botfront_disambiguation_followup
   - action_botfront_fallback
   - action_botfront_mapping
-  - utter_MavNNLk0m
-  - utter_welcome
+  - utter_bye
+  - utter_get_started
+  - utter_hi
 entities: []
 forms: {}
 intents:
+  - chitchat.bye
   - chitchat.greet
-responses:
-  utter_MavNNLk0m:
-    - language: en
-      text: What is your name
-  utter_welcome:
-    - language: en
-      text: Hello! how can i help you?
+  - get_started
+responses: {}
 session_config: {}
 slots:
   disambiguation_message:
