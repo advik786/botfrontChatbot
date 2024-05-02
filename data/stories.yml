@@ -1,0 +1,10 @@
+stories:
+  - story: KFC (1)
+    steps:
+      - intent: chitchat.greet
+        user: hi
+        entities: []
+      - action: utter_welcome
+    metadata:
+      group: KFC
+rules: []
