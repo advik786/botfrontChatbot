@@ -5,6 +5,7 @@ stories:
         user: hi
         entities: []
       - action: utter_welcome
+      - action: utter_MavNNLk0m
     metadata:
       group: KFC
 rules: []
