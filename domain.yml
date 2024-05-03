@@ -62,7 +62,7 @@ forms:
             type: from_text
         name: concern
         utter_on_new_valid_slot: false
-    updatedAt: 1714734901737
+    updatedAt: 1714719719373
   feedback_form:
     collect_in_botfront: null
     description: null
@@ -131,7 +131,7 @@ forms:
             type: from_text
         name: feeback
         utter_on_new_valid_slot: false
-    updatedAt: 1714734901739
+    updatedAt: 1714729513389
 intents:
   - chitchat.greet
   - kfc.inform_franchisee
@@ -146,12 +146,14 @@ responses:
   utter_7khtXlHVI:
     - custom: {}
       language: en
+      metadata: null
   utter_9rVYga1dj:
     - custom: {}
       language: en
   utter_LX4jkwvVN:
     - language: en
-      text: 'we have registered your concern -  {concern}'
+      metadata: null
+      text: 'We have registered your concern -  {concern}'
   utter_MF1TteHwG:
     - language: en
       quick_replies:
@@ -246,6 +248,7 @@ responses:
       text: Please share your experience and feedback
   utter_select_dropdown:
     - language: en
+      metadata: null
       quick_replies:
         - payload: '/kfc.inform_franchisee{"franchisee":"Bangalore"}'
           title: Bangalore
