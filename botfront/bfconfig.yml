@@ -1,10 +1,10 @@
-name: Chitchat
-namespace: bf-chitchat
+name: KFC
+namespace: bf-ded
 defaultLanguage: en
 nluThreshold: 0.75
 timezoneOffset: 0
 allowContextualQuestions: false
 instance:
   name: Default Instance
-  host: 'http://localhost:5005'
-  projectId: hxiuJthS2tWvfdjFW
+  host: 'http://botfront-rasa-service.botfront-project-2'
+  projectId: YT4rsbQzeX3eYS5o8
