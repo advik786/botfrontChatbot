@@ -1,4 +1,4 @@
-name: KFC
+name: Chitchat
 namespace: bf-chitchat
 defaultLanguage: en
 nluThreshold: 0.75
