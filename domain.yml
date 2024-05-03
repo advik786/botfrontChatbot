@@ -7,6 +7,7 @@ actions:
   - action_process_kfc_role
   - action_validate_receipt
   - check_city
+  - utter_7khtXlHVI
   - utter_9rVYga1dj
   - utter_LX4jkwvVN
   - utter_MF1TteHwG
@@ -130,7 +131,7 @@ forms:
             type: from_text
         name: feeback
         utter_on_new_valid_slot: false
-    updatedAt: 1714719719376
+    updatedAt: 1714729513389
 intents:
   - chitchat.greet
   - kfc.inform_franchisee
@@ -142,12 +143,17 @@ intents:
   - kyc.inform_first_main_highlight
   - kyc.second_main_highlight
 responses:
+  utter_7khtXlHVI:
+    - custom: {}
+      language: en
+      metadata: null
   utter_9rVYga1dj:
     - custom: {}
       language: en
   utter_LX4jkwvVN:
     - language: en
-      text: 'We have registered your concern -  {concern}'
+      metadata: null
+      text: 'we have registered your concern -  {concern}'
   utter_MF1TteHwG:
     - language: en
       quick_replies:
@@ -242,6 +248,7 @@ responses:
       text: Please share your experience and feedback
   utter_select_dropdown:
     - language: en
+      metadata: null
       quick_replies:
         - payload: '/kfc.inform_franchisee{"franchisee":"Bangalore"}'
           title: Bangalore
