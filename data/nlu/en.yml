@@ -1,0 +1,141 @@
+version: "2.0"
+nlu:
+- intent: chitchat.greet
+  metadata:
+    language: en
+  examples: |
+    - I greet you
+    - a good day
+    - a good morning
+    - afternoon
+    - and a good morning to you
+    - evening
+    - good evening
+    - good evening there
+    - good evening to you
+    - good morning
+    - good morning there
+    - good morning to you
+    - good morning too
+    - greetings
+    - have a great morning
+    - have a nice morning
+    - hello
+    - hello again
+    - hello good evening
+    - hello good morning
+    - hello hi
+    - hello there
+    - hey
+    - hey good evening
+    - hey there
+    - heya
+    - hi
+    - hi good morning
+    - hi there
+    - howdy
+    - just going to say hi
+    - long time no see
+    - lovely day isn't it
+    - morning
+    - top of the morning to you
+- intent: kfc.customer_feedback
+  metadata:
+    language: en
+  examples: |
+    - impressed with support
+    - very good support
+- intent: kfc.fifth_main_highlight
+  metadata:
+    language: en
+  examples: |
+    - [Delay in delivery](fifth_main_highlight)
+    - [Delay in response](fifth_main_highlight)
+    - [Food poisoning](fifth_main_highlight)
+    - [Issue not resolved](fifth_main_highlight)
+    - [Table Dirty](fifth_main_highlight)
+- intent: kfc.fourth_main_highlight
+  metadata:
+    language: en
+  examples: |
+    - [Lack of availability](fourth_main_highlight)
+    - [Packaging defect](fourth_main_highlight)
+    - [Service](fourth_main_highlight)
+    - [Speed](fourth_main_highlight)
+- intent: kfc.inform_franchisee
+  metadata:
+    language: en
+  examples: |
+    - [Kolkata](franchisee) is my franchisee
+    - franchisee [Lucknow](franchisee)
+    - franchisee is [Bangalore](franchisee)
+    - my franchisee is [Delhi](franchisee)
+- intent: kfc.language
+  metadata:
+    language: en
+  examples: |
+    - Selected language is [English](language_for_kfc)
+    - Selected language is [Spanish](language_for_kfc)
+- intent: kfc.proceed_upload
+  metadata:
+    language: en
+  examples: |
+    - Proceed Upload
+    - proceed upload
+- intent: kfc.re_upload
+  metadata:
+    language: en
+  examples: |
+    - Re-Upload
+- intent: kfc.reupload
+  metadata:
+    language: en
+  examples: |
+    - re-upload
+- intent: kfc.role
+  metadata:
+    language: en
+  examples: |
+    - Selected Role is [Customer](role_for_kfc)
+    - Selected Role is [Employee](role_for_kfc)
+- intent: kfc.third_main_highlight
+  metadata:
+    language: en
+  examples: |
+    - [Burnt/undercooked food](third_main_highlight)
+    - [Incorrect items](third_main_highlight)
+    - [Missing items](third_main_highlight)
+    - [Product Issue](third_main_highlight)
+    - [Restaurant environment](third_main_highlight)
+    - [Taste Dislike](third_main_highlight)
+- intent: kfc.uploaded
+  metadata:
+    language: en
+  examples: |
+    - file upload
+    - uploaded
+- intent: kyc.inform_first_main_highlight
+  metadata:
+    language: en
+  examples: |
+    - [Criminal activity](first_main_highlight)
+    - [Foreign Bodies](first_main_highlight)
+    - [Illness/Injury](first_main_highlight)
+    - [Payment Issue](first_main_highlight)
+    - [Pests in restaurant](first_main_highlight)
+    - [Property damage](first_main_highlight)
+    - [Serious service / Rude Service](first_main_highlight)
+- intent: kyc.second_main_highlight
+  metadata:
+    language: en
+  examples: |
+    - [Data Breach](second_main_highlight)
+    - [Facilities](second_main_highlight)
+    - [Great Service](second_main_highlight)
+    - [Just Eat/Uber Eats & Glovo](second_main_highlight)
+    - [Marketing dissatisfaction](second_main_highlight)
+    - [Neighbour complaints](second_main_highlight)
+    - [Product dislike](second_main_highlight)
+    - [Product like](second_main_highlight)
+    - [Team/Employee Recognition](second_main_highlight)
+    - [Web/App](second_main_highlight)
