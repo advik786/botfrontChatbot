@@ -5,8 +5,8 @@ cards:
       Engagements: of those conversations, those with length one or more.
     type: conversationCounts
     visible: true
-    startDate: '2024-04-22T18:30:00.000Z'
-    endDate: '2024-04-29T18:29:59.999Z'
+    startDate: '2024-04-23T18:30:00.000Z'
+    endDate: '2024-04-30T18:29:59.999Z'
     chartType: line
     valueType: absolute
     wide: true
@@ -19,15 +19,15 @@ cards:
   - name: Conversation Length
     type: conversationLengths
     visible: true
-    startDate: '2024-04-22T18:30:00.000Z'
-    endDate: '2024-04-29T18:29:59.999Z'
+    startDate: '2024-04-23T18:30:00.000Z'
+    endDate: '2024-04-30T18:29:59.999Z'
     chartType: bar
     valueType: absolute
   - name: Top 10 Intents
     type: intentFrequencies
     visible: true
-    startDate: '2024-04-22T18:30:00.000Z'
-    endDate: '2024-04-29T18:29:59.999Z'
+    startDate: '2024-04-23T18:30:00.000Z'
+    endDate: '2024-04-30T18:29:59.999Z'
     chartType: bar
     valueType: absolute
     excludeIntents:
@@ -36,16 +36,16 @@ cards:
   - name: Conversation Duration
     type: conversationDurations
     visible: true
-    startDate: '2024-04-22T18:30:00.000Z'
-    endDate: '2024-04-29T18:29:59.999Z'
+    startDate: '2024-04-23T18:30:00.000Z'
+    endDate: '2024-04-30T18:29:59.999Z'
     chartType: bar
     valueType: absolute
   - name: Conversations with Fallback
     description: The number of conversations in which a fallback action was triggered.
     type: conversationCounts
     visible: true
-    startDate: '2024-04-22T18:30:00.000Z'
-    endDate: '2024-04-29T18:29:59.999Z'
+    startDate: '2024-04-23T18:30:00.000Z'
+    endDate: '2024-04-30T18:29:59.999Z'
     chartType: line
     valueType: absolute
     eventFilter:
@@ -59,8 +59,8 @@ cards:
     description: The number of times a fallback action was triggered.
     type: actionCounts
     visible: true
-    startDate: '2024-04-22T18:30:00.000Z'
-    endDate: '2024-04-29T18:29:59.999Z'
+    startDate: '2024-04-23T18:30:00.000Z'
+    endDate: '2024-04-30T18:29:59.999Z'
     chartType: line
     valueType: absolute
     includeActions:
@@ -68,8 +68,8 @@ cards:
   - name: Top 10 Triggers
     type: triggerFrequencies
     visible: true
-    startDate: '2024-04-22T18:30:00.000Z'
-    endDate: '2024-04-29T18:29:59.999Z'
+    startDate: '2024-04-23T18:30:00.000Z'
+    endDate: '2024-04-30T18:29:59.999Z'
     chartType: bar
     valueType: absolute
     limit: 10
@@ -78,5 +78,5 @@ languages:
 envs:
   - development
 name: Default Dashboard
-projectId: chitchat-xYm3JNmsg
+projectId: hxiuJthS2tWvfdjFW
 __v: 0
