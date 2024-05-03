@@ -7,6 +7,7 @@ actions:
   - action_process_kfc_role
   - action_validate_receipt
   - check_city
+  - utter_7khtXlHVI
   - utter_9rVYga1dj
   - utter_LX4jkwvVN
   - utter_MF1TteHwG
@@ -61,7 +62,7 @@ forms:
             type: from_text
         name: concern
         utter_on_new_valid_slot: false
-    updatedAt: 1714650885662
+    updatedAt: 1714734901737
   feedback_form:
     collect_in_botfront: null
     description: null
@@ -130,7 +131,7 @@ forms:
             type: from_text
         name: feeback
         utter_on_new_valid_slot: false
-    updatedAt: 1714734889128
+    updatedAt: 1714734901739
 intents:
   - chitchat.greet
   - kfc.inform_franchisee
@@ -142,12 +143,15 @@ intents:
   - kyc.inform_first_main_highlight
   - kyc.second_main_highlight
 responses:
+  utter_7khtXlHVI:
+    - custom: {}
+      language: en
   utter_9rVYga1dj:
     - custom: {}
       language: en
   utter_LX4jkwvVN:
     - language: en
-      text: 'We have registered your concern -  {concern}'
+      text: 'we have registered your concern -  {concern}'
   utter_MF1TteHwG:
     - language: en
       quick_replies:
@@ -211,7 +215,12 @@ responses:
       language: en
   utter_get_started:
     - language: en
-      text: Hello
+      text: >-
+        KFC values your business and respects your privacy. For more information
+        on  
+
+        how we use information we collect online, please read our Privacy Policy
+        at https://www.kfc.es/privacidad
   utter_invalid_email:
     - language: en
       text: Invalid Email
