@@ -39,6 +39,7 @@ nlu:
     - lovely day isn't it
     - morning
     - top of the morning to you
+    - hello how are you?
 - intent: kfc.customer_feedback
   metadata:
     language: en
