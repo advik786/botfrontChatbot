@@ -131,7 +131,7 @@ forms:
             type: from_text
         name: feeback
         utter_on_new_valid_slot: false
-    updatedAt: 1714729513389
+    updatedAt: 1714815266270
 intents:
   - chitchat.greet
   - kfc.inform_franchisee
@@ -200,12 +200,13 @@ responses:
       text: What is your name?
   utter_aw0bSxelM:
     - language: en
+      metadata: null
       text: >-
         We're sorry we missed the mark this time, Your feedback will be used to
         help make us better.  
 
         Please share your contact details and store details with us so we can
-        reach out.
+        reach out
   utter_default:
     - custom:
         options:
