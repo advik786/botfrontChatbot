@@ -1,35 +1,447 @@
 actions:
+  - action_ask_main_highlight
   - action_botfront_disambiguation
   - action_botfront_disambiguation_followup
   - action_botfront_fallback
   - action_botfront_mapping
-  - action_my_action
-  - utter_Y8eJ1P6mf
-  - utter_bye
+  - action_process_kfc_role
+  - action_validate_receipt
+  - check_city
+  - utter_7khtXlHVI
+  - utter_9rVYga1dj
+  - utter_LX4jkwvVN
+  - utter_MF1TteHwG
+  - utter_P9fzlybL8
+  - utter_ask_concern
+  - utter_ask_email
+  - utter_ask_feeback
+  - utter_ask_language
+  - utter_ask_name
+  - utter_aw0bSxelM
+  - utter_default
   - utter_get_started
-  - utter_hi
+  - utter_invalid_email
+  - utter_jpUAP02Dd
+  - utter_o6-UQCi-xD
   - utter_select_dropdown
+  - utter_select_english_main_highlight
+  - utter_select_spanish_main_highlight
+  - utter_trM2t6H25
+  - utter_upload_verified
+  - utter_zkC1ttZps
 entities: []
-forms: {}
+forms:
+  concern_form:
+    collect_in_botfront: true
+    description: ''
+    graph_elements:
+      edges:
+        - condition: null
+          id: e1-concern
+          source: '1'
+          target: concern
+          type: condition
+      nodes:
+        - id: '1'
+          position:
+            x: 200
+            'y': 200
+          type: start
+        - id: concern
+          position:
+            x: 120
+            'y': 350
+          slotName: concern
+          type: slot
+    groupName: KFC
+    name: concern_form
+    slots:
+      - filling:
+          - intent: []
+            not_intent: []
+            type: from_text
+        name: concern
+        utter_on_new_valid_slot: false
+    updatedAt: 1714979291948
+  feedback_form:
+    collect_in_botfront: null
+    description: null
+    graph_elements:
+      edges:
+        - condition: null
+          id: e1-email
+          source: '1'
+          target: email
+          type: condition
+        - condition: null
+          id: eemail-name
+          source: email
+          target: name
+          type: condition
+        - condition: null
+          id: ename-feeback
+          source: name
+          target: feeback
+          type: condition
+      nodes:
+        - id: '1'
+          position:
+            x: 200
+            'y': 200
+          type: start
+        - id: email
+          position:
+            x: 120
+            'y': 350
+          slotName: email
+          type: slot
+        - id: name
+          position:
+            x: 120
+            'y': 500
+          slotName: name
+          type: slot
+        - id: feeback
+          position:
+            x: 120
+            'y': 650
+          slotName: feeback
+          type: slot
+    groupName: KFC
+    name: feedback_form
+    slots:
+      - filling:
+          - intent: []
+            not_intent: []
+            type: from_text
+        name: email
+        utter_on_new_valid_slot: false
+        validation:
+          comparatum: null
+          operator: email
+      - filling:
+          - intent: []
+            not_intent: []
+            type: from_text
+        name: name
+        utter_on_new_valid_slot: false
+      - filling:
+          - intent: []
+            not_intent: []
+            type: from_text
+        name: feeback
+        utter_on_new_valid_slot: false
+    updatedAt: 1714979291953
 intents:
-  - chitchat.bye
   - chitchat.greet
-  - get_started
+  - kfc.inform_franchisee
+  - kfc.language
+  - kfc.proceed_upload
+  - kfc.reupload
+  - kfc.role
+  - kfc.uploaded
+  - kyc.inform_first_main_highlight
+  - kyc.second_main_highlight
 responses:
-  utter_Y8eJ1P6mf:
+  utter_7khtXlHVI:
+    - custom: {}
+      language: en
+  utter_9rVYga1dj:
+    - custom: {}
+      language: en
+  utter_LX4jkwvVN:
     - language: en
-      text: test
+      text: 'We have registered your concern -  {concern}'
+  utter_MF1TteHwG:
+    - language: en
+      quick_replies:
+        - payload: /kfc.uploaded
+          title: Upload
+          type: postback
+      text: Please upload order receipt.
+  utter_P9fzlybL8:
+    - language: en
+      text: |-
+        Thanks {name}, for your feedback -   
+        {feeback}
+  utter_ask_concern:
+    - language: en
+      text: Tell me your concern
+  utter_ask_email:
+    - language: en
+      text: What is your email?
+  utter_ask_feeback:
+    - language: en
+      text: Your Feedback
+  utter_ask_language:
+    - language: en
+      metadata:
+        forceClose: false
+        forceOpen: false
+        linkTarget: _blank
+        pageChangeCallbacks: null
+        pageEventCallbacks: null
+        userInput: hide
+      quick_replies:
+        - payload: '/kfc.language{"language_for_kfc":"English"}'
+          title: English
+          type: postback
+        - payload: '/kfc.language{"language_for_kfc":"Spanish"}'
+          title: Spanish
+          type: postback
+      text: |-
+        Welcome to KFC  
+        Happy to assist you!  
+        Please select the preferred language.
+  utter_ask_name:
+    - language: en
+      text: What is your name?
+  utter_aw0bSxelM:
+    - language: en
+      text: >-
+        We're sorry we missed the mark this time, Your feedback will be used to
+        help make us better.  
+
+        Please share your contact details and store details with us so we can
+        reach out
+  utter_default:
+    - custom:
+        options:
+          - Hindi
+          - English
+          - Spanish
+        text: Select your language
+        type: dropdown
+      language: en
   utter_get_started:
     - language: en
-      metadata: null
-      text: hello
+      text: >-
+        KFC values your business and respects your privacy. For more information
+        on  
+
+        how we use information we collect online, please read our Privacy Policy
+        at https://www.kfc.es/privacidad
+  utter_invalid_email:
+    - language: en
+      text: Invalid Email
+  utter_jpUAP02Dd:
+    - language: en
+      metadata:
+        forceClose: false
+        forceOpen: false
+        linkTarget: _blank
+        pageChangeCallbacks: null
+        pageEventCallbacks: null
+        userInput: hide
+      quick_replies:
+        - payload: '/kfc.role{"role_for_kfc":"Customer"}'
+          title: Customer
+          type: postback
+        - payload: '/kfc.role{"role_for_kfc":"Employee"}'
+          title: Employee
+          type: postback
+      text: Do you work for us or are you our customer?
+  utter_o6-UQCi-xD:
+    - language: en
+      text: Please share your experience and feedback
   utter_select_dropdown:
     - language: en
-      text: Dropdown Initiated
+      quick_replies:
+        - payload: '/kfc.inform_franchisee{"franchisee":"Bangalore"}'
+          title: Bangalore
+          type: postback
+        - payload: '/kfc.inform_franchisee{"franchisee":"Delhi"}'
+          title: Delhi
+          type: postback
+        - payload: '/kfc.inform_franchisee{"franchisee":"Chennai"}'
+          title: Chennai
+          type: postback
+        - payload: '/kfc.inform_franchisee{"":"Chandigarh"}'
+          title: Chandigarh
+          type: postback
+        - payload: '/kfc.inform_franchisee{"":"Kolkata"}'
+          title: Kolkata
+          type: postback
+      text: 'Please select a franchisee:'
+  utter_select_english_main_highlight:
+    - language: en
+      metadata:
+        forceClose: false
+        forceOpen: false
+        linkTarget: _blank
+        pageChangeCallbacks: null
+        pageEventCallbacks: null
+        userInput: hide
+      quick_replies:
+        - payload: >-
+            /kyc.inform_first_main_highlight{"first_main_highlight":"Illness/Injury"}
+          title: Illness/Injury
+          type: postback
+        - payload: >-
+            /kyc.inform_first_main_highlight{"first_main_highlight":"Foreign
+            Bodies"}
+          title: Foreign Bodies
+          type: postback
+        - payload: >-
+            /kyc.inform_first_main_highlight{"first_main_highlight":"Pests in
+            restaurant"}
+          title: Pests in restaurant
+          type: postback
+        - payload: >-
+            /kyc.inform_first_main_highlight{"first_main_highlight":"Serious
+            service / Rude Service"}
+          title: Serious service / Rude Service
+          type: postback
+        - payload: >-
+            /kyc.inform_first_main_highlight{"first_main_highlight":"Payment
+            Issue"}
+          title: Payment Issue
+          type: postback
+        - payload: >-
+            /kyc.inform_first_main_highlight{"first_main_highlight":"Property
+            damage"}
+          title: Property damage
+          type: postback
+        - payload: >-
+            /kyc.inform_first_main_highlight{"first_main_highlight":"Criminal
+            activity"}
+          title: Criminal activity
+          type: postback
+        - payload: >-
+            /kyc.second_main_highlight{"second_main_highlight":"Just Eat/Uber
+            Eats & Glovo"}
+          title: Just Eat/Uber Eats & Glovo
+          type: postback
+        - payload: '/kyc.second_main_highlight{"second_main_highlight":"Web/App"}'
+          title: Web/App
+          type: postback
+        - payload: '/kyc.second_main_highlight{"second_main_highlight":"Product like"}'
+          title: Product like
+          type: postback
+        - payload: >-
+            /kyc.second_main_highlight{"second_main_highlight":"Product
+            dislike"}
+          title: Product dislike
+          type: postback
+        - payload: '/kyc.second_main_highlight{"second_main_highlight":"Facilities"}'
+          title: Facilities
+          type: postback
+        - payload: >-
+            /kyc.second_main_highlight{"second_main_highlight":"Marketing
+            dissatisfaction"}
+          title: Marketing dissatisfaction
+          type: postback
+        - payload: '/kyc.second_main_highlight{"second_main_highlight":"Data Breach"}'
+          title: Data Breach
+          type: postback
+        - payload: >-
+            /kyc.second_main_highlight{"second_main_highlight":"Neighbour
+            complaints"}
+          title: Neighbour complaints
+          type: postback
+        - payload: >-
+            /kyc.second_main_highlight{"second_main_highlight":"Team/Employee
+            Recognition"}
+          title: Team/Employee Recognition
+          type: postback
+        - payload: '/kyc.second_main_highlight{"second_main_highlight":"Great Service"}'
+          title: Great Service
+          type: postback
+        - payload: '/kfc.third_main_highlight{"third_main_highlight":"Taste Dislike"}'
+          title: Taste Dislike
+          type: postback
+        - payload: >-
+            /kfc.third_main_highlight{"third_main_highlight":"Burnt/undercooked
+            food"}
+          title: Burnt/undercooked food
+          type: postback
+        - payload: '/kfc.third_main_highlight{"third_main_highlight":"Product Issue"}'
+          title: Product Issue
+          type: postback
+        - payload: >-
+            /kfc.third_main_highlight{"third_main_highlight":"Restaurant
+            environment"}
+          title: Restaurant environment
+          type: postback
+        - payload: '/kfc.third_main_highlight{"third_main_highlight":"Missing items"}'
+          title: Missing items
+          type: postback
+        - payload: '/kfc.third_main_highlight{"third_main_highlight":"Incorrect items"}'
+          title: Incorrect items
+          type: postback
+        - payload: '/kfc.fourth_main_highlight{"":"Service"}'
+          title: Service
+          type: postback
+        - payload: '/kfc.fourth_main_highlight{"":"Packaging defect"}'
+          title: Packaging defect
+          type: postback
+        - payload: '/kfc.fourth_main_highlight{"fourth_main_highlight":"Speed"}'
+          title: Speed
+          type: postback
+        - payload: >-
+            /kfc.fourth_main_highlight{"fourth_main_highlight":"Lack of
+            availability"}
+          title: Lack of availability
+          type: postback
+        - payload: >-
+            /kfc.fifth_main_highlight{"fifth_main_highlight":"Delay in
+            response"}
+          title: Delay in response
+          type: postback
+        - payload: >-
+            /kfc.fifth_main_highlight{"fifth_main_highlight":"Issue not
+            resolved"}
+          title: Issue not resolved
+          type: postback
+        - payload: '/kfc.fifth_main_highlight{"fifth_main_highlight":"Food poisoning"}'
+          title: Food poisoning
+          type: postback
+        - payload: '/kfc.fifth_main_highlight{"fifth_main_highlight":"Table Dirty"}'
+          title: Table Dirty
+          type: postback
+        - payload: >-
+            /kfc.fifth_main_highlight{"fifth_main_highlight":"Delay in
+            delivery"}
+          title: Delay in delivery
+          type: postback
+      text: 'Please select the main highlight of your customer experience:'
+  utter_select_spanish_main_highlight:
+    - language: en
+      quick_replies:
+        - payload: ''
+          title: ''
+          type: postback
+      text: ''
+  utter_trM2t6H25:
+    - language: en
+      text: Please tell me your concern
+  utter_upload_verified:
+    - language: en
+      quick_replies:
+        - payload: /kfc.proceed_upload
+          title: Proceed
+          type: postback
+        - payload: /kfc.reupload
+          title: Re-upload
+          type: postback
+      text: >-
+        Receipt uploaded is valid. Do you want to proceed with this receipt or
+        Re-upload
+  utter_zkC1ttZps:
+    - custom: {}
+      language: en
 session_config: {}
 slots:
+  concern:
+    type: unfeaturized
   disambiguation_message:
+    type: unfeaturized
+  email:
     type: unfeaturized
   fallback_language:
     initial_value: en
+    type: unfeaturized
+  feeback:
+    type: unfeaturized
+  name:
     type: unfeaturized
