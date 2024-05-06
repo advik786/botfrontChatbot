@@ -1,77 +1,25 @@
-stories:
-  - story: KFC
+stories: []
+rules:
+  - rule: Farewells
+    condition: []
+    steps:
+      - intent: chitchat.bye
+      - action: utter_bye
+    metadata:
+      group: Example group
+  - rule: Get started
+    condition: []
+    steps:
+      - intent: get_started
+      - action: utter_get_started
+      - action: utter_Y8eJ1P6mf
+      - action: action_my_action
+    metadata:
+      group: Example group
+  - rule: Greetings
+    condition: []
     steps:
       - intent: chitchat.greet
-        entities: []
-      - action: utter_get_started
-      - action: utter_jpUAP02Dd
-      - intent: kfc.role
-        entities: []
-      - action: action_process_kfc_role
-      - checkpoint: KFC__branches
+      - action: utter_hi
     metadata:
-      group: KFC
-  - story: KFC__Customer
-    steps:
-      - checkpoint: KFC__branches
-      - intent: kfc.language
-        entities: []
-      - action: action_ask_main_highlight
-      - checkpoint: KFC__Customer__branches
-    metadata:
-      group: KFC
-  - story: KFC__Customer__FirstMainHighlight
-    steps:
-      - checkpoint: KFC__Customer__branches
-      - intent: kyc.inform_first_main_highlight
-        entities: []
-      - action: utter_MF1TteHwG
-      - intent: kfc.uploaded
-        entities: []
-      - action: action_validate_receipt
-      - action: utter_9rVYga1dj
-      - checkpoint: KFC__Customer__FirstMainHighlight__branches
-    metadata:
-      group: KFC
-  - story: KFC__Customer__FirstMainHighlight__Proceed
-    steps:
-      - checkpoint: KFC__Customer__FirstMainHighlight__branches
-      - intent: kfc.proceed_upload
-        entities: []
-      - action: utter_o6-UQCi-xD
-      - action: feedback_form
-      - active_loop: feedback_form
-      - active_loop: null
-      - action: utter_P9fzlybL8
-      - action: utter_aw0bSxelM
-      - action: utter_zkC1ttZps
-    metadata:
-      group: KFC
-  - story: KFC__Customer__FirstMainHighlight__ReUpload
-    steps:
-      - checkpoint: KFC__Customer__FirstMainHighlight__branches
-      - intent: kfc.reupload
-        entities: []
-    metadata:
-      group: KFC
-  - story: KFC__Customer__SecondMainHighlight
-    steps:
-      - checkpoint: KFC__Customer__branches
-      - intent: kyc.second_main_highlight
-        entities: []
-    metadata:
-      group: KFC
-  - story: KFC__Employee
-    steps:
-      - checkpoint: KFC__branches
-      - intent: kfc.inform_franchisee
-        entities: []
-      - action: check_city
-      - action: utter_trM2t6H25
-      - action: concern_form
-      - active_loop: concern_form
-      - active_loop: null
-      - action: utter_LX4jkwvVN
-    metadata:
-      group: KFC
-rules: []
+      group: Example group
