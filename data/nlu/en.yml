@@ -3,139 +3,316 @@ nlu:
 - intent: chitchat.greet
   metadata:
     language: en
-  examples: |
-    - I greet you
-    - a good day
-    - a good morning
-    - afternoon
-    - and a good morning to you
-    - evening
-    - good evening
-    - good evening there
-    - good evening to you
-    - good morning
-    - good morning there
-    - good morning to you
-    - good morning too
-    - greetings
-    - have a great morning
-    - have a nice morning
-    - hello
-    - hello again
-    - hello good evening
-    - hello good morning
-    - hello hi
-    - hello there
-    - hey
-    - hey good evening
-    - hey there
-    - heya
-    - hi
-    - hi good morning
-    - hi there
-    - howdy
-    - just going to say hi
-    - long time no see
-    - lovely day isn't it
-    - morning
-    - top of the morning to you
+  examples:
+  - text: |
+      I greet you
+    metadata:
+      canonical: true
+  - text: |
+      a good day
+  - text: |
+      a good morning
+  - text: |
+      afternoon
+  - text: |
+      and a good morning to you
+  - text: |
+      evening
+  - text: |
+      good evening
+  - text: |
+      good evening there
+  - text: |
+      good evening to you
+  - text: |
+      good morning
+  - text: |
+      good morning there
+  - text: |
+      good morning to you
+  - text: |
+      good morning too
+  - text: |
+      greetings
+  - text: |
+      have a great morning
+  - text: |
+      have a nice morning
+  - text: |
+      hello
+  - text: |
+      hello again
+  - text: |
+      hello good evening
+  - text: |
+      hello good morning
+  - text: |
+      hello hi
+  - text: |
+      hello how are you?
+  - text: |
+      hello there
+  - text: |
+      hey
+  - text: |
+      hey good evening
+  - text: |
+      hey there
+  - text: |
+      heya
+  - text: |
+      hi
+  - text: |
+      hi good morning
+  - text: |
+      hi there
+  - text: |
+      howdy
+  - text: |
+      just going to say hi
+  - text: |
+      long time no see
+  - text: |
+      lovely day isn't it
+  - text: |
+      morning
+  - text: |
+      top of the morning to you
 - intent: kfc.customer_feedback
   metadata:
     language: en
-  examples: |
-    - impressed with support
-    - very good support
+  examples:
+  - text: |
+      impressed with support
+    metadata:
+      canonical: true
+  - text: |
+      very good support
 - intent: kfc.fifth_main_highlight
   metadata:
     language: en
-  examples: |
-    - [Delay in delivery](fifth_main_highlight)
-    - [Delay in response](fifth_main_highlight)
-    - [Food poisoning](fifth_main_highlight)
-    - [Issue not resolved](fifth_main_highlight)
-    - [Table Dirty](fifth_main_highlight)
+  examples:
+  - text: |
+      [Delay in delivery](fifth_main_highlight)
+    metadata:
+      canonical: true
+  - text: |
+      [Delay in response](fifth_main_highlight)
+    metadata:
+      canonical: true
+  - text: |
+      [Food poisoning](fifth_main_highlight)
+    metadata:
+      canonical: true
+  - text: |
+      [Issue not resolved](fifth_main_highlight)
+    metadata:
+      canonical: true
+  - text: |
+      [Table Dirty](fifth_main_highlight)
+    metadata:
+      canonical: true
 - intent: kfc.fourth_main_highlight
   metadata:
     language: en
-  examples: |
-    - [Lack of availability](fourth_main_highlight)
-    - [Packaging defect](fourth_main_highlight)
-    - [Service](fourth_main_highlight)
-    - [Speed](fourth_main_highlight)
+  examples:
+  - text: |
+      [Lack of availability](fourth_main_highlight)
+    metadata:
+      canonical: true
+  - text: |
+      [Packaging defect](fourth_main_highlight)
+    metadata:
+      canonical: true
+  - text: |
+      [Service](fourth_main_highlight)
+    metadata:
+      canonical: true
+  - text: |
+      [Speed](fourth_main_highlight)
+    metadata:
+      canonical: true
 - intent: kfc.inform_franchisee
   metadata:
     language: en
-  examples: |
-    - [Kolkata](franchisee) is my franchisee
-    - franchisee [Lucknow](franchisee)
-    - franchisee is [Bangalore](franchisee)
-    - my franchisee is [Delhi](franchisee)
+  examples:
+  - text: |
+      [Kolkata](franchisee) is my franchisee
+    metadata:
+      canonical: true
+  - text: |
+      franchisee [Lucknow](franchisee)
+    metadata:
+      canonical: true
+  - text: |
+      franchisee is [Bangalore](franchisee)
+    metadata:
+      canonical: true
+  - text: |
+      my franchisee is [Delhi](franchisee)
+    metadata:
+      canonical: true
 - intent: kfc.language
   metadata:
     language: en
-  examples: |
-    - Selected language is [English](language_for_kfc)
-    - Selected language is [Spanish](language_for_kfc)
+  examples:
+  - text: |
+      Selected language is [English](language_for_kfc)
+    metadata:
+      canonical: true
+  - text: |
+      Selected language is [Spanish](language_for_kfc)
+    metadata:
+      canonical: true
 - intent: kfc.proceed_upload
   metadata:
     language: en
-  examples: |
-    - Proceed Upload
-    - proceed upload
+  examples:
+  - text: |
+      Proceed Upload
+    metadata:
+      canonical: true
+  - text: |
+      proceed upload
 - intent: kfc.re_upload
   metadata:
     language: en
-  examples: |
-    - Re-Upload
+  examples:
+  - text: |
+      Re-Upload
+    metadata:
+      canonical: true
 - intent: kfc.reupload
   metadata:
     language: en
-  examples: |
-    - re-upload
+  examples:
+  - text: |
+      re-upload
+    metadata:
+      canonical: true
 - intent: kfc.role
   metadata:
     language: en
-  examples: |
-    - Selected Role is [Customer](role_for_kfc)
-    - Selected Role is [Employee](role_for_kfc)
+  examples:
+  - text: |
+      Selected Role is [Customer](role_for_kfc)
+    metadata:
+      canonical: true
+  - text: |
+      Selected Role is [Employee](role_for_kfc)
+    metadata:
+      canonical: true
 - intent: kfc.third_main_highlight
   metadata:
     language: en
-  examples: |
-    - [Burnt/undercooked food](third_main_highlight)
-    - [Incorrect items](third_main_highlight)
-    - [Missing items](third_main_highlight)
-    - [Product Issue](third_main_highlight)
-    - [Restaurant environment](third_main_highlight)
-    - [Taste Dislike](third_main_highlight)
+  examples:
+  - text: |
+      [Burnt/undercooked food](third_main_highlight)
+    metadata:
+      canonical: true
+  - text: |
+      [Incorrect items](third_main_highlight)
+    metadata:
+      canonical: true
+  - text: |
+      [Missing items](third_main_highlight)
+    metadata:
+      canonical: true
+  - text: |
+      [Product Issue](third_main_highlight)
+    metadata:
+      canonical: true
+  - text: |
+      [Restaurant environment](third_main_highlight)
+    metadata:
+      canonical: true
+  - text: |
+      [Taste Dislike](third_main_highlight)
+    metadata:
+      canonical: true
 - intent: kfc.uploaded
   metadata:
     language: en
-  examples: |
-    - file upload
-    - uploaded
+  examples:
+  - text: |
+      file upload
+    metadata:
+      canonical: true
+  - text: |
+      uploaded
 - intent: kyc.inform_first_main_highlight
   metadata:
     language: en
-  examples: |
-    - [Criminal activity](first_main_highlight)
-    - [Foreign Bodies](first_main_highlight)
-    - [Illness/Injury](first_main_highlight)
-    - [Payment Issue](first_main_highlight)
-    - [Pests in restaurant](first_main_highlight)
-    - [Property damage](first_main_highlight)
-    - [Serious service / Rude Service](first_main_highlight)
+  examples:
+  - text: |
+      [Criminal activity](first_main_highlight)
+    metadata:
+      canonical: true
+  - text: |
+      [Foreign Bodies](first_main_highlight)
+    metadata:
+      canonical: true
+  - text: |
+      [Illness/Injury](first_main_highlight)
+    metadata:
+      canonical: true
+  - text: |
+      [Payment Issue](first_main_highlight)
+    metadata:
+      canonical: true
+  - text: |
+      [Pests in restaurant](first_main_highlight)
+    metadata:
+      canonical: true
+  - text: |
+      [Property damage](first_main_highlight)
+    metadata:
+      canonical: true
+  - text: |
+      [Serious service / Rude Service](first_main_highlight)
+    metadata:
+      canonical: true
 - intent: kyc.second_main_highlight
   metadata:
     language: en
-  examples: |
-    - [Data Breach](second_main_highlight)
-    - [Facilities](second_main_highlight)
-    - [Great Service](second_main_highlight)
-    - [Just Eat/Uber Eats & Glovo](second_main_highlight)
-    - [Marketing dissatisfaction](second_main_highlight)
-    - [Neighbour complaints](second_main_highlight)
-    - [Product dislike](second_main_highlight)
-    - [Product like](second_main_highlight)
-    - [Team/Employee Recognition](second_main_highlight)
-    - [Web/App](second_main_highlight)
+  examples:
+  - text: |
+      [Data Breach](second_main_highlight)
+    metadata:
+      canonical: true
+  - text: |
+      [Facilities](second_main_highlight)
+    metadata:
+      canonical: true
+  - text: |
+      [Great Service](second_main_highlight)
+    metadata:
+      canonical: true
+  - text: |
+      [Just Eat/Uber Eats & Glovo](second_main_highlight)
+    metadata:
+      canonical: true
+  - text: |
+      [Marketing dissatisfaction](second_main_highlight)
+    metadata:
+      canonical: true
+  - text: |
+      [Neighbour complaints](second_main_highlight)
+    metadata:
+      canonical: true
+  - text: |
+      [Product dislike](second_main_highlight)
+    metadata:
+      canonical: true
+  - text: |
+      [Product like](second_main_highlight)
+    metadata:
+      canonical: true
+  - text: |
+      [Team/Employee Recognition](second_main_highlight)
+    metadata:
+      canonical: true
+  - text: |
+      [Web/App](second_main_highlight)
+    metadata:
+      canonical: true

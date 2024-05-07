@@ -25,18 +25,11 @@ stories:
       - checkpoint: KFC__Customer__branches
       - intent: kyc.inform_first_main_highlight
         entities: []
-      - action: order_id_form
-      - active_loop: order_id_form
-      - active_loop: null
+      - action: utter_MF1TteHwG
+      - intent: kfc.uploaded
+        entities: []
       - action: action_validate_receipt
-      - action: user_feedback_form
-      - active_loop: user_feedback_form
-      - active_loop: null
-      - action: utter_aw0bSxelM
-      - action: user_detail_form
-      - active_loop: user_detail_form
-      - active_loop: null
-      - action: utter_WH5EVCnUx
+      - action: utter_9rVYga1dj
       - checkpoint: KFC__Customer__FirstMainHighlight__branches
     metadata:
       group: KFC
@@ -79,7 +72,6 @@ stories:
       - active_loop: concern_form
       - active_loop: null
       - action: utter_LX4jkwvVN
-      - action: utter_WeY-f3ikn
     metadata:
       group: KFC
 rules: []
