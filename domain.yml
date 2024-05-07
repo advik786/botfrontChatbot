@@ -7,20 +7,29 @@ actions:
   - action_process_kfc_role
   - action_validate_receipt
   - check_city
-  - utter_7khtXlHVI
-  - utter_9rVYga1dj
   - utter_LX4jkwvVN
-  - utter_MF1TteHwG
   - utter_P9fzlybL8
+  - utter_WH5EVCnUx
+  - utter_WeY-f3ikn
   - utter_ask_concern
   - utter_ask_email
   - utter_ask_feeback
   - utter_ask_language
   - utter_ask_name
+  - utter_ask_order_id
+  - utter_ask_store_number
+  - utter_ask_user_email
+  - utter_ask_user_feedback
+  - utter_ask_user_mobile
+  - utter_ask_user_name
   - utter_aw0bSxelM
   - utter_default
   - utter_get_started
   - utter_invalid_email
+  - utter_invalid_order_id
+  - utter_invalid_store_number
+  - utter_invalid_user_email
+  - utter_invalid_user_mobile
   - utter_jpUAP02Dd
   - utter_o6-UQCi-xD
   - utter_select_dropdown
@@ -62,10 +71,7 @@ forms:
             type: from_text
         name: concern
         utter_on_new_valid_slot: false
-        validation:
-          comparatum: null
-          operator: is_in
-    updatedAt: 1715065900727
+    updatedAt: 1715065925059
   feedback_form:
     collect_in_botfront: null
     description: null
@@ -134,7 +140,160 @@ forms:
             type: from_text
         name: feeback
         utter_on_new_valid_slot: false
-    updatedAt: 1714994878094
+    updatedAt: 1715065925061
+  order_id_form:
+    collect_in_botfront: null
+    description: null
+    graph_elements:
+      edges:
+        - condition: null
+          id: e1-order_id
+          source: '1'
+          target: order_id
+          type: condition
+      nodes:
+        - id: '1'
+          position:
+            x: 200
+            'y': 200
+          type: start
+        - id: order_id
+          position:
+            x: 120
+            'y': 350
+          slotName: order_id
+          type: slot
+    groupName: KFC
+    name: order_id_form
+    slots:
+      - filling:
+          - intent: []
+            not_intent: null
+            type: from_text
+        name: order_id
+        utter_on_new_valid_slot: false
+        validation:
+          comparatum: null
+          operator: word
+    updatedAt: 1715065925063
+  user_detail_form:
+    collect_in_botfront: true
+    description: ''
+    graph_elements:
+      edges:
+        - condition: null
+          id: e1-user_name
+          source: '1'
+          target: user_name
+          type: condition
+        - condition: null
+          id: euser_name-user_mobile
+          source: user_name
+          target: user_mobile
+          type: condition
+        - condition: null
+          id: euser_mobile-user_email
+          source: user_mobile
+          target: user_email
+          type: condition
+        - condition: null
+          id: euser_email-store_number
+          source: user_email
+          target: store_number
+          type: condition
+      nodes:
+        - id: '1'
+          position:
+            x: 200
+            'y': 200
+          type: start
+        - id: user_name
+          position:
+            x: 120
+            'y': 350
+          slotName: user_name
+          type: slot
+        - id: user_mobile
+          position:
+            x: 120
+            'y': 500
+          slotName: user_mobile
+          type: slot
+        - id: user_email
+          position:
+            x: 120
+            'y': 650
+          slotName: user_email
+          type: slot
+        - id: store_number
+          position:
+            x: 120
+            'y': 800
+          slotName: store_number
+          type: slot
+    groupName: KFC
+    name: user_detail_form
+    slots:
+      - filling:
+          - intent: []
+            not_intent: []
+            type: from_text
+        name: user_name
+        utter_on_new_valid_slot: false
+      - filling:
+          - intent: []
+            not_intent: []
+            type: from_text
+        name: user_mobile
+        utter_on_new_valid_slot: false
+      - filling:
+          - intent: []
+            not_intent: []
+            type: from_text
+        name: user_email
+        utter_on_new_valid_slot: false
+        validation:
+          comparatum: null
+          operator: email
+      - filling:
+          - intent: []
+            not_intent: []
+            type: from_text
+        name: store_number
+        utter_on_new_valid_slot: false
+    updatedAt: 1715065925066
+  user_feedback_form:
+    collect_in_botfront: null
+    description: null
+    graph_elements:
+      edges:
+        - condition: null
+          id: e1-user_feedback
+          source: '1'
+          target: user_feedback
+          type: condition
+      nodes:
+        - id: '1'
+          position:
+            x: 200
+            'y': 200
+          type: start
+        - id: user_feedback
+          position:
+            x: 120
+            'y': 350
+          slotName: user_feedback
+          type: slot
+    groupName: KFC
+    name: user_feedback_form
+    slots:
+      - filling:
+          - intent: []
+            not_intent: []
+            type: from_text
+        name: user_feedback
+        utter_on_new_valid_slot: false
+    updatedAt: 1715065925068
 intents:
   - chitchat.greet
   - kfc.inform_franchisee
@@ -142,36 +301,36 @@ intents:
   - kfc.proceed_upload
   - kfc.reupload
   - kfc.role
-  - kfc.uploaded
   - kyc.inform_first_main_highlight
   - kyc.second_main_highlight
 responses:
-  utter_7khtXlHVI:
-    - custom: {}
-      language: en
-      metadata: null
-  utter_9rVYga1dj:
-    - custom: {}
-      language: en
   utter_LX4jkwvVN:
     - language: en
-      metadata: null
       text: 'We have registered your concern -  {concern}'
-  utter_MF1TteHwG:
-    - language: en
-      quick_replies:
-        - payload: /kfc.uploaded
-          title: Upload
-          type: postback
-      text: Please upload order receipt.
   utter_P9fzlybL8:
     - language: en
       text: |-
         Thanks {name}, for your feedback -   
         {feeback}
+  utter_WH5EVCnUx:
+    - language: en
+      metadata:
+        forceClose: false
+        forceOpen: false
+        linkTarget: _blank
+        pageChangeCallbacks: null
+        pageEventCallbacks: null
+        userInput: hide
+      text: |-
+        Thank you, {user_name}
+
+        Once again we  are sorry for the experience.  
+          
+        AS requested a KFC representative will contact you within 48 hours.
+  utter_WeY-f3ikn:
+    - language: en
   utter_ask_concern:
     - language: en
-      metadata: null
       text: Tell me your concern
   utter_ask_email:
     - language: en
@@ -202,24 +361,37 @@ responses:
   utter_ask_name:
     - language: en
       text: What is your name?
+  utter_ask_order_id:
+    - language: en
+      text: Please provide your order id.
+  utter_ask_store_number:
+    - language: en
+      text: >-
+        Please provide three digit store number which can be found on order
+        receipt.
+  utter_ask_user_email:
+    - language: en
+      text: What is your email?
+  utter_ask_user_feedback:
+    - language: en
+      text: Please share your experience and feedback.
+  utter_ask_user_mobile:
+    - language: en
+      text: Whats your mobile number?
+  utter_ask_user_name:
+    - language: en
+      text: What is your name?
   utter_aw0bSxelM:
     - language: en
-      metadata: null
       text: >-
         We're sorry we missed the mark this time, Your feedback will be used to
         help make us better.  
 
         Please share your contact details and store details with us so we can
-        reach out
+        reach out.
   utter_default:
-    - custom:
-        options:
-          - Hindi
-          - English
-          - Spanish
-        text: Select your language
-        type: dropdown
-      language: en
+    - language: en
+      text: Hey How may i help you?
   utter_get_started:
     - language: en
       text: >-
@@ -231,6 +403,18 @@ responses:
   utter_invalid_email:
     - language: en
       text: Invalid Email
+  utter_invalid_order_id:
+    - language: en
+      text: Invalid order ID
+  utter_invalid_store_number:
+    - language: en
+      text: Store ID should be of 3 digits.
+  utter_invalid_user_email:
+    - language: en
+      text: Invalid email format.
+  utter_invalid_user_mobile:
+    - language: en
+      text: Invalid Mobile No.
   utter_jpUAP02Dd:
     - language: en
       metadata:
@@ -253,7 +437,6 @@ responses:
       text: Please share your experience and feedback
   utter_select_dropdown:
     - language: en
-      metadata: null
       quick_replies:
         - payload: '/kfc.inform_franchisee{"franchisee":"Bangalore"}'
           title: Bangalore
@@ -425,16 +608,7 @@ responses:
       text: Please tell me your concern
   utter_upload_verified:
     - language: en
-      quick_replies:
-        - payload: /kfc.proceed_upload
-          title: Proceed
-          type: postback
-        - payload: /kfc.reupload
-          title: Re-upload
-          type: postback
-      text: >-
-        Receipt uploaded is valid. Do you want to proceed with this receipt or
-        Re-upload
+      text: Order ID Submitted.
   utter_zkC1ttZps:
     - custom: {}
       language: en
@@ -452,4 +626,16 @@ slots:
   feeback:
     type: unfeaturized
   name:
+    type: unfeaturized
+  order_id:
+    type: unfeaturized
+  store_number:
+    type: unfeaturized
+  user_email:
+    type: unfeaturized
+  user_feedback:
+    type: unfeaturized
+  user_mobile:
+    type: unfeaturized
+  user_name:
     type: unfeaturized

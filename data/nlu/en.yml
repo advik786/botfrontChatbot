@@ -49,8 +49,6 @@ nlu:
   - text: |
       hello hi
   - text: |
-      hello how are you?
-  - text: |
       hello there
   - text: |
       hey
