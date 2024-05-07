@@ -325,7 +325,7 @@ responses:
       text: |-
         Thank you, {user_name}
 
-        Once again we are sorry for the experience.  
+        Once again we  are sorry for the experience.  
           
         AS requested a KFC representative will contact you within 48 hours.
   utter_WeY-f3ikn:
